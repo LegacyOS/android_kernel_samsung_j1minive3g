@@ -1511,7 +1511,7 @@ static void __exit mip_exit(void)
 	i2c_del_driver(&mip_driver);
 }
 
-module_init(mip_init);
+late_initcall(mip_init);
 module_exit(mip_exit);
 
 MODULE_DESCRIPTION("MELFAS MIP4 Touchscreen");

@@ -879,6 +879,7 @@ static int cpufreq_add_dev_interface(unsigned int cpu,
 	return ret;
 
 err_out_kobj_put:
+	BUG();
 	kobject_put(&policy->kobj);
 	wait_for_completion(&policy->kobj_unregister);
 	return ret;
@@ -1040,6 +1041,7 @@ static int cpufreq_add_dev(struct device *dev, struct subsys_interface *sif)
 	return 0;
 
 err_out_unregister:
+	BUG();
 	write_lock_irqsave(&cpufreq_driver_lock, flags);
 	for_each_cpu(j, policy->cpus)
 		per_cpu(cpufreq_cpu_data, j) = NULL;
