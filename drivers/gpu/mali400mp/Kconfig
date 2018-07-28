@@ -19,7 +19,7 @@ choice
 	    Choose this option to select DDK version.
 
 if MALI_VER_R4P1
-source "drivers/gpu/mali400/r4p1/Kconfig"
+source "drivers/gpu/mali400mp/r4p1/Kconfig"
 endif
 
 endchoice
