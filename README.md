@@ -15,4 +15,5 @@
 	- module : modules/*.ko
 
 3. How to Clean	
-	  $ make clean
+	  $ ./build_kernel.sh Clean 
+	  or $ make distclean
